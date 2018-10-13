@@ -1,4 +1,4 @@
-ID;Name;Longitude_WGS84;Latitude_WGS84;NameOfStation;Line;LittleFunctionalBPAAmount;BPAAmount;RepairOfEscalators
+ExitID;Name;Longitude_WGS84;Latitude_WGS84;NameOfStation;Line;LittleFunctionalBPAAmount;BPAAmount;RepairOfEscalators
 326;Китай-город, вход-выход 3 в северный вестибюль;37.6309849;55.7567672;Китай-город;Калужско-Рижская линия;4;4;
 331;Китай-город, вход-выход 8 в северный вестибюль;37.6316766;55.7573154;Китай-город;Калужско-Рижская линия;4;4;
 327;Китай-город, вход-выход 4 в северный вестибюль;37.6312698;55.7568819;Китай-город;Калужско-Рижская линия;4;4;
