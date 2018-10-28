@@ -1,4 +1,4 @@
-import pandas as pd
+import pandas
 import random
 
 
@@ -6,26 +6,31 @@ def get():
     global lines, stations, exits
 
     # data = pd.read_csv('lines1.csv', error_bad_lines=False)
-    lines = pd.read_csv('lines.csv')
-    stations = pd.read_csv('stations.csv')
-    exits = pd.read_csv('exits.csv', sep=';')
+    lines = pandas.read_csv('lines.csv')
+    stations = pandas.read_csv('stations.csv')
+    exits = pandas.read_csv('exits.csv', sep=';')
 
 
 if __name__ == "__main__":
     get()
-    train_table = pd.DataFrame(columns=('id', 'Line', 'Station', 'Train', 'Passengers'))
-    Trains = ['Русич', 'Москвич', 'Поезд', 'Яуза', 'Ока']
-    concrete_train = random.choice(Trains)
-    concrete_passengers = random.randint(1, 1000)
-    concrete_lines = []
-    print(lines['Line'])
-    #concrete_lines.append(x for x in lines['Line'])
-    print(concrete_lines)
-    #for i in range(17):
-    # train_table.append( {'id:i}, {Line: lines.iloc[i]['Line']})
-    print(train_table)
+    df = pandas.read_csv('lines.csv', sep=';')
+    trains = ['Русич', 'Москва', 'Ока']
 
-    # numberStations = stations['Number'].count()
-# print(numberStations)
-# for i in range(5):
-#  >> > df.loc[i] = [np.random.randint(-1, 1) for n in range(3)]
+    array_trains = []
+    array_vagons = []
+    array_passangers = []
+    d_index = []
+    for i in range(len(df['Line'])):
+        array_trains.append(random.choice(trains))
+        d_index.append(i+1)
+        array_vagons.append(random.randint(1, 10))
+        array_passangers.append(random.randint(1, 1000))
+    d = {'Trains': array_trains}
+    df1 = pandas.DataFrame(data=d, index=d_index)
+
+    d2 = {'LineID': d_index, 'Line': df['Line'], 'Vagons': array_vagons, 'Passangers': array_passangers}
+    df2 = pandas.DataFrame(data=d2)
+    print(df2)
+    #df = pandas.merge(df1, df2, left_index=True, right_index=True)
+    #df['Date'] = df['Date'].apply(lambda x: int(str(x)[-4:]))
+    df2.to_csv('out.csv', sep=';', index= False)
