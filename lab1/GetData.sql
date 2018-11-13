@@ -6,8 +6,8 @@ FROM 'C:\Database\lab1\stations.csv'
 WITH
     (
 		FIRSTROW = 2,
-		DATAFILETYPE = 'char',
-		FIELDTERMINATOR = ',',
+		DATAFILETYPE = 'widechar',
+		FIELDTERMINATOR = ';',
 		ROWTERMINATOR = '0x0A'
     )
 GO
@@ -18,7 +18,7 @@ WITH
     (
 		FIRSTROW = 2,
 		DATAFILETYPE = 'char',
-		FIELDTERMINATOR = ',',
+		FIELDTERMINATOR = ';',
 		ROWTERMINATOR = '0x0A'
     )
 GO
@@ -29,10 +29,10 @@ WITH
     (
 		FIRSTROW = 2,
 		DATAFILETYPE = 'char',
-		FIELDTERMINATOR = ',',
+		FIELDTERMINATOR = ';',
 		ROWTERMINATOR = '0x0A'
     )
-GO
+
 
 BULK INSERT LinesT
 FROM 'C:\Database\lab1\lines.csv'
@@ -40,7 +40,7 @@ WITH
     (
 		FIRSTROW = 2,
 		DATAFILETYPE = 'char',
-		FIELDTERMINATOR = ',',
+		FIELDTERMINATOR = ';',
 		ROWTERMINATOR = '0x0A'
     )
 GO

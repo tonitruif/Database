@@ -1,5 +1,2 @@
-USE master
-GO
-
 DROP DATABASE Metro
 GO
