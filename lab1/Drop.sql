@@ -1,0 +1,2 @@
+DROP DATABASE Metro
+GO
