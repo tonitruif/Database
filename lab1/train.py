@@ -19,6 +19,6 @@ for i in range(16):
     MaxVagons.append(random.randint(10, 12))
 print(len(LineID), len(arrtrain))
 raw_data = {'LineID':LineID, 'Train': arrtrain, 'BuildDate': BuildDate,
-            'MaxPassengers': MaxPassengers, 'MaxVagon': MaxVagons}
+            'MaxPassengers': MaxPassengers, 'MaxVagon': MaxVagons, 'TrainID': LineID}
 df = pandas.DataFrame(data=raw_data)
 df.to_csv('Train.csv', sep = ';', index = False)
