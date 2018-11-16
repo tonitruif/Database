@@ -15,7 +15,7 @@ CREATE TABLE TrainsT
 	LineID int NOT NULL, 
 	MaxPassengers int NOT NULL,
 	MaxVagon int NOT NULL,
-	Train nvarchar(15) NOT NULL,
+	Train nvarchar(20) NOT NULL,
 	TrainID int NOT NULL,)
 
 --Line;LineID;Passangers;Vagons

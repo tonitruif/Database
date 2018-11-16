@@ -6,7 +6,7 @@ FROM 'C:\Database\lab1\stations.csv'
 WITH
     (
 		FIRSTROW = 2,
-		DATAFILETYPE = 'widechar',
+		DATAFILETYPE = 'char',
 		FIELDTERMINATOR = ';',
 		ROWTERMINATOR = '0x0A'
     )
@@ -24,7 +24,7 @@ WITH
 GO
 
 BULK INSERT LinkerT
-FROM 'C:\Database\lab1\out.csv'
+FROM 'C:\Database\lab1\Linker.csv'
 WITH
     (
 		FIRSTROW = 2,
@@ -32,7 +32,7 @@ WITH
 		FIELDTERMINATOR = ';',
 		ROWTERMINATOR = '0x0A'
     )
-
+GO
 
 BULK INSERT LinesT
 FROM 'C:\Database\lab1\lines.csv'
