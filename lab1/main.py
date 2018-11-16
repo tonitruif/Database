@@ -12,6 +12,7 @@ def get():
 
 
 if __name__ == "__main__":
+    '''
     get()
     df = pandas.read_csv('lines.csv', sep=';')
     array_trains = []
@@ -35,4 +36,11 @@ if __name__ == "__main__":
     #df = pandas.merge(df1, df2, left_index=True, right_index=True)
     #df['Date'] = df['Date'].apply(lambda x: int(str(x)[-4:]))
     df2.to_csv('Linker.csv', sep=';', index= False)
+    '''
+    df = pandas.read_csv('stations.csv', sep = ';')
+    for i in range(len(df['Station'])):
+        for j in range(len(df['Station'])):
+            if df['Station'][i] == df['Station'][j]:
+                df.drop([j], axis=0, inplace=True)
+    df.to_csv('out.csv', sep =';', index = False)
 
