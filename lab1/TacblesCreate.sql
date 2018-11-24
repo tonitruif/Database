@@ -21,10 +21,10 @@ CREATE TABLE TrainsT
 --Line;LineID;Passangers;Vagons
 --Сокольническая линия;1;122;2
 CREATE TABLE LinkerT
-	(LineID int NOT NULL,
-	Passengers int NOT NULL,
+	(StationID int NOT NULL,
+	LineIDs int NOT NULL,
 	Vagons int NOT NULL,
-	StationID int NOT NULL)
+	Passangers int NOT NULL)
 
 
 --Line;LineID;global_id;Status;

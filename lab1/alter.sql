@@ -38,3 +38,8 @@ GO
 
 INSERT INTO LinkerT VALUES (1, -1, 2, 4)
 GO
+
+Use master
+SELECT name, modify_date
+FROM sys.objects
+WHERE name = 'LinkerT'
