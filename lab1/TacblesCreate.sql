@@ -22,7 +22,7 @@ CREATE TABLE TrainsT
 --Сокольническая линия;1;122;2
 CREATE TABLE LinkerT
 	(StationID int NOT NULL,
-	LineIDs int NOT NULL,
+	LineID int NOT NULL,
 	Vagons int NOT NULL,
 	Passangers int NOT NULL)
 

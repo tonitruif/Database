@@ -35,11 +35,3 @@ GO
 ALTER TABLE LinkerT
 ADD CONSTRAINT pass_check CHECK (Passengers > 0)
 GO
-
-INSERT INTO LinkerT VALUES (1, -1, 2, 4)
-GO
-
-Use master
-SELECT name, modify_date
-FROM sys.objects
-WHERE name = 'LinkerT'
