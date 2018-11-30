@@ -10,4 +10,3 @@ DELETE TrainsT
 WHERE TrainID = 50
 
 
-

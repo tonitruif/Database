@@ -1,0 +1,6 @@
+C:\Database\lab4\UserDef\UserDef\bin\Debug\UserDef.dll
+C:\Database\lab4\UserDef\UserDef\bin\Debug\UserDef.pdb
+C:\Database\lab4\UserDef\UserDef\obj\Debug\UserDef.csprojAssemblyReference.cache
+C:\Database\lab4\UserDef\UserDef\obj\Debug\UserDef.csproj.CoreCompileInputs.cache
+C:\Database\lab4\UserDef\UserDef\obj\Debug\UserDef.dll
+C:\Database\lab4\UserDef\UserDef\obj\Debug\UserDef.pdb
