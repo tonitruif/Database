@@ -7,19 +7,17 @@ GO
 RECONFIGURE
 GO
 
+DROP ASSEMBLY SqlServerUDF
 
-CREATE ASSEMBLY SqlServerUDF
-AUTHORIZATION dbo
+ALTER ASSEMBLY SqlServerUDF
 FROM 'C:\Database\lab4\SqlServerUDF\SqlServerUDF\bin\Debug\SqlServerUDF.dll'
-WITH PERMISSION_SET = SAFE
-GO
 
-CREATE FUNCTION GetRandomNumber ()
+CREATE AGGREGATE CountT( @instr int )
 RETURNS INT
-AS
 EXTERNAL NAME
-SqlServerUDF.[SqlServerUDF].GetRandomNumber
+SqlServerUDF.[SqlAggregate1]
 GO
 
-SELECT dbo.GetRandomNumber() AS RandomNumber
+SELECT dbo.CountT (LinkerT.Passangers) AS Pass
+FROM LinkerT
 GO
