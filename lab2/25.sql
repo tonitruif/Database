@@ -1,0 +1,12 @@
+WITH DUPLICATE
+AS 
+(
+	SELECT ROW_NUMBER() OVER(PARTITION BY Passangers ORDER BY Passangers) Pass, Vagons
+	FROM LinkerT
+)
+DELETE 
+FROM DUPLICATE
+WHERE Pass > 1
+
+SELECT *
+FROM LinkerT
