@@ -87,9 +87,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="SqlFunction1.cs" />
     <Compile Include="SqlAggregate1.cs" />
-    <Compile Include="SqlFunction2.cs" />
-    <Compile Include="CodeFile1.cs" />
+    <Compile Include="scalar.cs" />
+    <Compile Include="storedpro.cs" />
+    <Compile Include="tablefunc.cs" />
+    <Compile Include="trigger.cs" />
+    <Compile Include="SqlUserDefinedType1.cs" />
   </ItemGroup>
 </Project>

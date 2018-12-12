@@ -1,0 +1,42 @@
+﻿<TrainsT Train="Ласточка">
+  <LinesT LineID="1" Line="Сокольническая линия" StatusS="действует;&#xD;" />
+</TrainsT>
+<TrainsT Train="Москва">
+  <LinesT LineID="3" Line="Арбатско-Покровская линия" StatusS="действует;&#xD;" />
+</TrainsT>
+<TrainsT Train="Русич">
+  <LinesT LineID="4" Line="Филёвская линия" StatusS="действует;&#xD;" />
+</TrainsT>
+<TrainsT Train="Ока">
+  <LinesT LineID="5" Line="Кольцевая линия" StatusS="действует;&#xD;" />
+</TrainsT>
+<TrainsT Train="Русич">
+  <LinesT LineID="6" Line="Калужско-Рижская линия" StatusS="действует;&#xD;" />
+</TrainsT>
+<TrainsT Train="Ласточка">
+  <LinesT LineID="8" Line="Калининско-Солнцевская линия" StatusS="действует;&#xD;" />
+  <LinesT LineID="9" Line="Серпуховско-Тимирязевская линия" StatusS="действует;&#xD;" />
+</TrainsT>
+<TrainsT Train="Москва">
+  <LinesT LineID="10" Line="Люблинско-Дмитровская линия" StatusS="действует;&#xD;" />
+</TrainsT>
+<TrainsT Train="Русич">
+  <LinesT LineID="11" Line="Каховская линия" StatusS="действует;&#xD;" />
+</TrainsT>
+<TrainsT Train="Ласточка">
+  <LinesT LineID="12" Line="Бутовская линия Лёгкого метро" StatusS="действует;&#xD;" />
+</TrainsT>
+<TrainsT Train="Русич">
+  <LinesT LineID="13" Line="Московская монорельсовая транспортная система" StatusS="действует;&#xD;" />
+</TrainsT>
+<TrainsT Train="Ока">
+  <LinesT LineID="14" Line="Кожуховская линия" StatusS="строится;&#xD;" />
+</TrainsT>
+<TrainsT Train="Москва">
+  <LinesT LineID="15" Line="Большая кольцевая линия" StatusS="действует;&#xD;" />
+  <LinesT LineID="16" Line="Московское центральное кольцо" StatusS="действует;&#xD;" />
+  <LinesT LineID="17" Line="Калининская линия" StatusS="действует;&#xD;" />
+</TrainsT>
+<TrainsT Train="Ока">
+  <LinesT LineID="18" Line="Солнцевская линия" StatusS="действует;" />
+</TrainsT>
