@@ -1,0 +1,17 @@
+﻿<Line>
+  <Line LineName="Сокольническая линия">
+    <ID>1</ID>
+  </Line>
+  <Line LineName="Замоскворецкая линия">
+    <ID>2</ID>
+  </Line>
+  <Line LineName="Арбатско-Покровская линия">
+    <ID>3</ID>
+  </Line>
+  <Line LineName="Филёвская линия">
+    <ID>4</ID>
+  </Line>
+  <Line LineName="Кольцевая линия">
+    <ID>5</ID>
+  </Line>
+</Line>

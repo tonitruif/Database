@@ -22,4 +22,4 @@ SELECT
         Line		   AS [Line!1!LineName]
 FROM LinesT
 WHERE LineID < 6
-FOR XML EXPLICIT; 
+FOR XML EXPLICIT, ROOT('Line'); 
