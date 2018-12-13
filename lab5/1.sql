@@ -10,9 +10,9 @@ SELECT Train, LinesT.LineID, Line, StatusS
 FROM TrainsT JOIN LinesT ON LinesT.LineID =TrainsT.LineID
 FOR XML PATH
 
-SELECT Train, LinesT.LineID, Line, StatusS
-FROM TrainsT JOIN LinesT ON LinesT.LineID =TrainsT.LineID
-FOR XML EXPLICIT
+SELECT Train, BuildDate, TrainID
+FROM TrainsT 
+FOR XML PATH
 
 	
 SELECT
