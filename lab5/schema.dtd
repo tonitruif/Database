@@ -1,0 +1,17 @@
+<?xml encoding="UTF-8"?>
+
+<!ELEMENT Lines (row)+>
+<!ATTLIST Lines
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT row (LineID,Line)>
+<!ATTLIST row
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT LineID (#PCDATA)>
+<!ATTLIST LineID
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT Line (#PCDATA)>
+<!ATTLIST Line
+  xmlns CDATA #FIXED ''>
