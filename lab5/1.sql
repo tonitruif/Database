@@ -23,3 +23,7 @@ SELECT
 FROM LinesT
 WHERE LineID < 8
 FOR XML EXPLICIT, ROOT('Line'); 
+
+SELECT LineID, Line
+FROM LinesT
+FOR XML PATH, ROOT ('Lines')
