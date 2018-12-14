@@ -19,7 +19,7 @@ SELECT
         1              AS tag,
         NULL           AS parent,
         LineID         AS [Line!1!ID!element],
-        Line		   AS [Line!1!LineName]
+        Line		   AS [Line!1!LineName!element]
 FROM LinesT
-WHERE LineID < 6
+WHERE LineID < 8
 FOR XML EXPLICIT, ROOT('Line'); 

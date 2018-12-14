@@ -1,0 +1,30 @@
+﻿<Line>
+  <Line>
+    <ID>1</ID>
+    <LineName>Сокольническая линия</LineName>
+  </Line>
+  <Line>
+    <ID>2</ID>
+    <LineName>Замоскворецкая линия</LineName>
+  </Line>
+  <Line>
+    <ID>3</ID>
+    <LineName>Арбатско-Покровская линия</LineName>
+  </Line>
+  <Line>
+    <ID>4</ID>
+    <LineName>Филёвская линия</LineName>
+  </Line>
+  <Line>
+    <ID>5</ID>
+    <LineName>Кольцевая линия</LineName>
+  </Line>
+  <Line>
+    <ID>6</ID>
+    <LineName>Калужско-Рижская линия</LineName>
+  </Line>
+  <Line>
+    <ID>7</ID>
+    <LineName>Таганско-Краснопресненская линия</LineName>
+  </Line>
+</Line>
