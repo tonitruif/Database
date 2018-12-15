@@ -11,15 +11,22 @@ FROM	TrainsT JOIN (
 
 SELECT *
 FROM TrainsT JOIN LinkerT ON LinkerT.LineID = TrainsT.LineID
-WHERE Passangers > 
-	(
-	SELECT AVG(Passangers) 
-	FROM 
+WHERE LinkerT.LineID IN
+	(	
+		SELECT LineID
+		FROM TrainsT 
+		GROUP BY LineID
+		HAVING SUM(MaxPassengers) < 
 		(
-		SELECT Passangers
-		FROM TrainsT JOIN LinkerT ON LinkerT.LineID = TrainsT.LineID
-		WHERE Passangers > 800
-		) as a
+			SELECT MAX(MP) 
+			FROM 
+				(
+					SELECT SUM(MaxPassengers) as MP
+					FROM TrainsT 
+					WHERE MaxPassengers > 200
+					GROUP BY LineID
+				) as a
+		) 
 	)
 
 

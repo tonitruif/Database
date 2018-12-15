@@ -1,7 +1,7 @@
 use Metro 
 
 SELECT *
-FROM (LinkerT JOIN TrainsT ON TrainsT.LineID = LinkerT.LineID) 
+FROM LinkerT JOIN TrainsT ON TrainsT.LineID = LinkerT.LineID
 WHERE Vagons IN
 (
 	SELECT Vagons

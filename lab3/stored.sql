@@ -7,7 +7,7 @@ WHERE MaxPassengers > @count
 EXEC param 800
 GO
 
-CREATE PROCEDURE storedRecurs(@i int)
+ALTER PROCEDURE storedRecurs(@i int)
 AS 
 BEGIN 
 	DECLARE @current int;
@@ -22,8 +22,7 @@ BEGIN
 		end;
 END;
 GO
-
-exec storedRecurs 4
+exec storedRecurs 3
 GO
 
 CREATE PROCEDURE cursorstored @i int

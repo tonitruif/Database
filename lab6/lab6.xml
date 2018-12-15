@@ -1,9 +1,0 @@
-﻿<Line>
-  <Line ID="1" LineName="Сокольническая линия" status="действует;&#xD;" />
-  <Line ID="2" LineName="Замоскворецкая линия" status="действует;&#xD;" />
-  <Line ID="3" LineName="Арбатско-Покровская линия" status="действует;&#xD;" />
-  <Line ID="4" LineName="Филёвская линия" status="действует;&#xD;" />
-  <Line ID="5" LineName="Кольцевая линия" status="действует;&#xD;" />
-  <Line ID="6" LineName="Калужско-Рижская линия" status="действует;&#xD;" />
-  <Line ID="7" LineName="Таганско-Краснопресненская линия" status="действует;&#xD;" />
-</Line>

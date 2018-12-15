@@ -22,7 +22,9 @@ AS
 	SELECT StationsT.StationId
 	FROM StationsT
 	WHERE StationID BETWEEN 10 AND 2
+
 	UNION ALL
+
 	SELECT BuildStations.StationId
 	FROM StationsT JOIN BuildStations ON StationsT.StationID = BuildStations.StationID
 	WHERE BuildStations.BuildYear > 2019

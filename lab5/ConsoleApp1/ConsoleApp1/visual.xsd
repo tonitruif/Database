@@ -6,7 +6,6 @@
         <xs:element maxOccurs="unbounded" name="row">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="LineID" type="xs:unsignedByte" />
               <xs:element name="Line" type="xs:string" />
             </xs:sequence>
           </xs:complexType>

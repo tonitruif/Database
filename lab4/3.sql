@@ -11,16 +11,16 @@ ALTER ASSEMBLY SqlServerUDF
 FROM 'C:\Database\lab4\SqlServerUDF\SqlServerUDF\bin\Debug\SqlServerUDF.dll'
 GO
 
-CREATE FUNCTION NameToAscii (@InputName NVARCHAR(4000))
+CREATE FUNCTION AvPass()
 RETURNS TABLE
 (
-	charpart NCHAR,
-	intpart INT
+	vagon int,
+	passangers int
 )
 AS
 EXTERNAL NAME
-SqlServerUDF.[SqlServerTVF.UserDefinedFunctions].NameToAscii
+SqlServerUDF.[UserDefinedFunctions].fillPass
 GO
 
-SELECT * FROM dbo.NameToAscii ('Test string' )
+SELECT * FROM dbo.AvPass()
 GO

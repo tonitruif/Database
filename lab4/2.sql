@@ -7,7 +7,7 @@ GO
 RECONFIGURE
 GO
 
-DROP ASSEMBLY SqlServerUDF
+--DROP ASSEMBLY SqlServerUDF
 
 ALTER ASSEMBLY SqlServerUDF
 FROM 'C:\Database\lab4\SqlServerUDF\SqlServerUDF\bin\Debug\SqlServerUDF.dll'

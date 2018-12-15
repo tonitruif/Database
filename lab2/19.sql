@@ -5,3 +5,6 @@ SET MaxPassengers =
 	FROM LinkerT
 )
 WHERE LineID = 2
+
+SELECT *
+FROM TrainsT

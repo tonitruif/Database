@@ -12,7 +12,7 @@ SELECT @doc = c FROM OPENROWSET(BULK 'C:\Database\lab5\try1.xml', SINGLE_BLOB) A
 EXEC sp_xml_preparedocument @idoc OUTPUT, @doc
  
  
---INSERT INTO nLines(LineID, Line) 
+INSERT INTO nLines(LineID, Line) 
 SELECT LineID, Line
 FROM OPENXML (@idoc, 'Lines/row',2)
 WITH (LineID int, Line nvarchar(50))

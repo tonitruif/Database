@@ -23,7 +23,7 @@ public partial class UserDefinedFunctions
        FillRowMethodName = "fillPass",
        TableDefinition = "Vagon int,Pass int"
        )]
-    public static IEnumerable getIdGroups()
+    public static IEnumerable getPass()
     {
         ArrayList vagarr = new ArrayList();
 
