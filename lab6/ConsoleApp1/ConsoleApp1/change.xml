@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Lines[
+  <!ELEMENT  Lines (row)+>
+  <!ELEMENT row (Line,LineID)>
+  <!ATTLIST row LineID ID #REQUIRED>
+  <!ELEMENT Line (#PCDATA)>
+]>
+<Lines>
+  <?refreshData daily?><![CDATA[<?xml version="1.0"?>]]><row><LineID>1</LineID><Line>asd</Line></row><!--commentlineTEST--><row><LineID>2</LineID><Line>Замоскворецкая линия</Line></row><row><LineID>3</LineID><Line>Арбатско-Покровская линия</Line></row><row><LineID>4</LineID><Line>Филёвская линия</Line></row><row><LineID>5</LineID><Line>Кольцевая линия</Line></row><row><LineID>6</LineID><Line>Калужско-Рижская линия</Line></row><row><LineID>7</LineID><Line>Таганско-Краснопресненская линия</Line></row><row><LineID>8</LineID><Line>Калининско-Солнцевская линия</Line></row><row><LineID>9</LineID><Line>Серпуховско-Тимирязевская линия</Line></row><row><LineID>10</LineID><Line>Люблинско-Дмитровская линия</Line></row><row><LineID>11</LineID><Line>Каховская линия</Line></row><row><LineID>12</LineID><Line>Бутовская линия Лёгкого метро</Line></row><row><LineID>13</LineID><Line>Московская монорельсовая транспортная система</Line></row><row><LineID>14</LineID><Line>Кожуховская линия</Line></row><row><LineID>15</LineID><Line>Большая кольцевая линия</Line></row><row><LineID>16</LineID><Line>Московское центральное кольцо</Line></row><row><LineID>17</LineID><Line>Калининская линия</Line></row><row><LineID>18</LineID><Line>Солнцевская линия</Line></row></Lines>
