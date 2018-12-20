@@ -47,12 +47,16 @@ namespace ConsoleApp1
             for (int i = 0; i < names.Count; i++)
                 Console.Write(names[i].ChildNodes[0].Value + "\r\n");
             //---------
+            XmlDocument xDoc1 = new XmlDocument();
+            FileStream myFile1 = new FileStream("../../working.xml", FileMode.Open);
+            xDoc1.Load(myFile1);
+            Console.WriteLine("etner id to find: ");
             string idToFind = Console.ReadLine();
-            XmlElement id = xDoc.GetElementById(idToFind);
+            XmlElement id = xDoc1.GetElementById(idToFind);
             if (id == null)
                 Console.Write("Null");
             else
-                Console.Write(id + "\r\n");
+                Console.Write(id.ChildNodes[0].InnerText + "\r\n");
             //------------
             XmlNodeList sur = xDoc.SelectNodes("//row/Line/text()[../../LineID/text()<'5']");
             for (int i = 0; i < sur.Count; i++)
@@ -64,6 +68,8 @@ namespace ConsoleApp1
             //----------------
             XmlNode single = xDoc.SelectSingleNode("descendant::row[LineID<5]");
             Console.Write("\nSelect Single: " + single.ChildNodes[1].ChildNodes[0].Value + "\r\n");
+            myFile.Close();
+            myFile1.Close();
         }
         static void access()
         {
@@ -87,6 +93,7 @@ namespace ConsoleApp1
             second = xDoc.SelectNodes("descendant::row[LineID<5]");
             for (int i = 0; i < second.Count; i++)
                 Console.Write("\nAccess to attribute: " + second[i].ChildNodes[1].ChildNodes[0].Value + "\r\n");
+            myFile.Close();
 
         }
         static void change()
@@ -124,6 +131,7 @@ namespace ConsoleApp1
             attAdd.SetAttribute("newatt", "123");
             Console.Write("   After change:" + single.Attributes[0].Name + "\n");
             xDoc.Save("../../attAdd.xml");
+            myFile.Close();
         }
 
     }

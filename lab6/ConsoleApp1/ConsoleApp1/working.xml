@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Lines[
+	<!ELEMENT  Lines (Line+)>
+	<!ELEMENT Line (LineName)>
+	<!ATTLIST Line LineID ID #REQUIRED>
+	<!ELEMENT LineName (#PCDATA)>
+]>
+
+<Lines>
+  <Line LineID="1">
+    <LineName>Сокольническая линия</LineName>
+  </Line>
+  <Line LineID="2">
+    <LineName>Замоскворецкая линия</LineName>
+  </Line>
+  <Line LineID="3">
+    <LineName>Арбатско-Покровская линия</LineName>
+  </Line>
+  <Line LineID="4">
+    <LineName>Филёвская линия</LineName>
+  </Line>
+  <Line LineID="5">
+    <LineName>Кольцевая линия</LineName>
+  </Line>
+  <Line LineID="6">
+    <LineName>Калужско-Рижская линия</LineName>
+  </Line>
+  <Line LineID="7">
+    <LineName>Таганско-Краснопресненская линия</LineName>
+  </Line>
+</Lines>
