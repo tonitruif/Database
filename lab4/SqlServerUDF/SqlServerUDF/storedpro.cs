@@ -13,9 +13,9 @@ public partial class StoredProcedures
         {
             SqlCommand contextCommand =
             new SqlCommand(
-            "Select LineID" + "from LinkerT " +
-            "where Passangers =  @Pass");
-            SqlParameter pPass = new SqlParameter("@duration", SqlDbType.Int);
+            "Select LineID" + "from TrainsT " +
+            "where MaxPassangers =  @Pass");
+            SqlParameter pPass = new SqlParameter("@Pass", SqlDbType.Int);
             pPass.Value = Pass;
             contextCommand.Parameters.Add(pPass);
             contextConnection.Open();
