@@ -1,10 +1,10 @@
 UPDATE TrainsT
 SET MaxPassengers = 
 (
-	SELECT Min(Passangers)
+	SELECT Max(Passangers)
 	FROM LinkerT
 )
-WHERE LineID = 2
+WHERE LineID = 3
 
 SELECT *
 FROM TrainsT

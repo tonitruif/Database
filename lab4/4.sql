@@ -11,11 +11,14 @@ ALTER ASSEMBLY SqlServerUDF
 FROM 'C:\Database\lab4\SqlServerUDF\SqlServerUDF\bin\Debug\SqlServerUDF.dll'
 GO
 
-Create Procedure GetConcatenatedNames ( @Role NVARCHAR(4000) )
+
+CREATE Procedure  GetPassengers ( @Pass int )
 As
 External Name
-SqlServerUDF.[StoredProcedures].GetConcatenatedNames
+SqlServerUDF.[StoredProcedures].GetPassengers
 GO
 
-Exec dbo.GetConcatenatedNames 'Reviewer'
+DROP PROCEDURE GetPassengers
+GO
+Exec dbo.GetPassengers 1000
 GO

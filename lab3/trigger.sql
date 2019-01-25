@@ -10,13 +10,23 @@ INSERT TrainsT (BuildDate, LineID, MaxPassengers, MaxVagon, Train, TrainID)
 VALUES (1234, 2, 23, 23, 'asf', 45)
 GO
 
-CREATE TRIGGER insttrigger   
+INSERT LinesT (Line, LineID, StatusS) 
+VALUES ('dfw', 1060, 'asf')
+GO
+
+SELECT * 
+FROM LinesT
+WHERE LineID = 1060
+GO
+
+ALTER TRIGGER insttrigger   
 ON TrainsT INSTEAD OF INSERT
 AS
 BEGIN 
-	SELECT * from inserted;
-	INSERT LinkerT(StationID,LineID,Vagons,Passangers)
-	VALUES(NULL,NULL,NULL,NULL)--исправить запрос таблица инсерт
+	--SELECT * from inserted;
+	DELETE  
+	FROM LinesT
+	WHERE LineID = 1060
 END;
 Go
 
@@ -24,4 +34,4 @@ INSERT TrainsT (BuildDate, LineID, MaxPassengers, MaxVagon, Train, TrainID)
 VALUES (1234, 2, 23, 23, 'asf', 45)
 GO
 
-DELETE FROM TrainsT WHERE BuildDate = 1234 --триггер на создание таблицы
+DELETE FROM TrainsT WHERE BuildDate = 1234 

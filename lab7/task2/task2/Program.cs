@@ -15,8 +15,8 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            read();
-            update();
+            //read();
+            //update();
             add();
             Console.ReadLine();
         }
@@ -36,7 +36,7 @@ namespace ConsoleApp1
             Console.WriteLine("\nUPDATE XML \n");
             XDocument xdoc = XDocument.Load("../../working.xml");
             xdoc.Element("Lines").Element("Line").Element("LineName").SetValue("asf");
-            Console.WriteLine(xdoc.Element("Lines").Element("Line").Element("LineName"));
+            Console.WriteLine(xdoc.Element("Lines").Element("Line").Element("LineName").Value);
         }
 
         static void add()
@@ -44,11 +44,22 @@ namespace ConsoleApp1
             Console.WriteLine("\nADD TO XML \n");
             XDocument xdoc = XDocument.Load("../../working.xml");
             XElement elementAdd = new XElement("Line", "newlinename");
+            var query1 = from res in xdoc.Descendants("Line")
+                         select res.Value;
+            foreach (var item in query1)
+            {
+                if (item == "Кольцевая линия")
+                {
+                    Console.WriteLine(item + "  ");
+                    Console.WriteLine("EXIST");
+                }
+            }
             xdoc.Element("Lines").Add(elementAdd);
+
 
             var query = from res in xdoc.Descendants("Line")
                         select res.Value;
-
+            Console.WriteLine("\n\n");
             foreach (var item in query)
                 Console.WriteLine(item + "  ");
         }

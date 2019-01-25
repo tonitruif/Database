@@ -1,9 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Data.Linq;//проект- добавить ссылку
+using System.Xml.Linq;
+using System.Data;
+using System.Data.SqlClient;
+using System.Data.Linq;
+using System.Data.Linq.Mapping;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
+using System.Reflection;
 
 
 
@@ -22,12 +28,14 @@ namespace task3
         static void Main(string[] args)
         {
             db = new DataContext(@"Data Source = .\MSSQLSERVER02; Database = Metro; Integrated Security = true");
-
+            string connectionString = (@"Data Source = .\MSSQLSERVER02; Database = Metro; Integrated Security = true");
             select1();
-            select2();
-            add();
-            update();
-            delete();
+            //select2();
+            //add();
+            //update();
+            //delete();
+
+            stored();
 
             Console.ReadLine();
         }
@@ -43,15 +51,15 @@ namespace task3
             foreach (var item in query)
                 Console.WriteLine(item + "   ");
         }
-        
+
         static public void select2()
         {
             Table<LinesT> lines = db.GetTable<LinesT>();
             Table<TrainsT> trains = db.GetTable<TrainsT>();
 
             var query = from l in lines
-                        join t in trains on l.LineID equals t.Lineid
-                        where t.buildDate < 1990
+                        join t in trains on l.LineID equals t.LineID
+                        where t.BuildDate < 1990
                         select l.Line;
             foreach (var item in query)
                 Console.WriteLine(item + "  ");
@@ -89,8 +97,8 @@ namespace task3
             db.SubmitChanges();
 
             var query1 = from l in lines
-                        where l.StatusS == "work"
-                        select l.Line;
+                         where l.StatusS == "work"
+                         select l.Line;
             foreach (var item in query1)
                 Console.WriteLine(item);
 
@@ -111,5 +119,17 @@ namespace task3
         }
 
 
+
+        static public void stored()
+        {
+            string connectionString = (@"Data Source = .\MSSQLSERVER02; Database = Metro; Integrated Security = true");
+            DataClasses1DataContext dt  = new DataClasses1DataContext(connectionString);
+            int value = 1000;
+            int avg;
+            //dt.ExecuteQuery 
+            avg = dt.GetPassengers(value);
+            Console.WriteLine(avg);
+
+        }
     }
 }

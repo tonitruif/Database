@@ -11,17 +11,17 @@ public partial class UserDefinedFunctions
     {
         public Int32 Vagon;
         public Int32 Passangers;
-        public AvPass(int Vag, int Pass)
+        public AvPass(Int32 Vagon, Int32 Passangers)
         {
-            Vagon = Vag;
-            Passangers = Pass;
+            this.Vagon = Vagon;
+            this.Passangers = Passangers;
         }
     }
 
     [Microsoft.SqlServer.Server.SqlFunction(
        DataAccess = DataAccessKind.Read,
        FillRowMethodName = "fillPass",
-       TableDefinition = "Vagon int,Pass int"
+       TableDefinition = "Vagon int, Pass int"
        )]
     public static IEnumerable getPass()
     {
@@ -31,9 +31,9 @@ public partial class UserDefinedFunctions
         {
             c.Open();
             using (SqlCommand cmd = new SqlCommand(
-                "select Vagons, Passengers " +
+                "select Vagons, Passangers " +
                 "from LinkerT " +
-                "where Passengers > 500", c
+                "where Passangers > 500", c
                 ))
             {
                 using (SqlDataReader reader = cmd.ExecuteReader())

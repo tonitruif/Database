@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Metro" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-AKD0EP1\MSSQLSERVER02;Initial Catalog=Metro;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False" SettingsObjectName="task3.Properties.Settings" SettingsPropertyName="MetroConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.TrainsT" Member="TrainsT">
+    <Type Name="TrainsT">
+      <Column Name="BuildDate" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="LineID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MaxPassengers" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MaxVagon" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Train" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="TrainID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="LinesT_TrainsT" Member="LinesT" ThisKey="LineID" OtherKey="LineID" Type="LinesT" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.StationsT" Member="StationsT">
+    <Type Name="StationsT">
+      <Column Name="Station" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Admarea" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="District" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="StatusS" Type="System.String" DbType="NVarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="StationID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="StationsT_LinkerT" Member="LinkerT" ThisKey="StationID" OtherKey="StationID" Type="LinkerT" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LinkerT" Member="LinkerT">
+    <Type Name="LinkerT">
+      <Column Name="StationID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="LineID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Vagons" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Passangers" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="StationsT_LinkerT" Member="StationsT" ThisKey="StationID" OtherKey="StationID" Type="StationsT" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="LinesT_LinkerT" Member="LinesT" ThisKey="LineID" OtherKey="LineID" Type="LinesT" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LinesT" Member="LinesT">
+    <Type Name="LinesT">
+      <Column Name="Line" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="LineID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="StatusS" Type="System.String" DbType="NVarChar(25) NOT NULL" CanBeNull="false" />
+      <Association Name="LinesT_TrainsT" Member="TrainsT" ThisKey="LineID" OtherKey="LineID" Type="TrainsT" />
+      <Association Name="LinesT_LinkerT" Member="LinkerT" ThisKey="LineID" OtherKey="LineID" Type="LinkerT" />
+    </Type>
+  </Table>
+  <Function Name="dbo.GetPassengers" Method="GetPassengers">
+    <Parameter Name="Pass" Parameter="pass" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>

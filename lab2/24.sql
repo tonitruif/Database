@@ -2,4 +2,4 @@ SELECT StationsT.StationID, StationsT.Station, LinkerT.Passangers, LinkerT.LineI
 AVG(LinkerT.Passangers) OVER(PARTITION BY StationsT.StationID, StationsT.Station) AS AVGPassangers,
 MIN(LinkerT.Passangers) OVER(PARTITION BY StationsT.StationID, StationsT.Station) AS MINPassangers,
 MAX(LinkerT.Passangers) OVER(PARTITION BY StationsT.StationID, StationsT.Station) AS MAXPassangers
-FROM StationsT LEFT OUTER JOIN LinkerT ON StationsT.StationID = LinkerT.StationID
+FROM StationsT JOIN LinkerT ON StationsT.StationID = LinkerT.StationID

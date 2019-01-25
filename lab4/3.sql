@@ -11,15 +11,25 @@ ALTER ASSEMBLY SqlServerUDF
 FROM 'C:\Database\lab4\SqlServerUDF\SqlServerUDF\bin\Debug\SqlServerUDF.dll'
 GO
 
+
 CREATE FUNCTION AvPass()
 RETURNS TABLE
 (
-	vagon int,
-	passangers int
+	Vagons INT,
+	Pass INT
 )
 AS
 EXTERNAL NAME
-SqlServerUDF.[UserDefinedFunctions].fillPass
+SqlServerUDF.UserDefinedFunctions.getPass
+GO
+
+
+select Vagons, Passangers 
+                from LinkerT
+                where Passangers > 500
+
+
+DROP FUNCTION AvPass
 GO
 
 SELECT * FROM dbo.AvPass()

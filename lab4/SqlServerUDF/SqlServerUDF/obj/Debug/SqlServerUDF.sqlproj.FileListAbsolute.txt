@@ -1,7 +1,6 @@
 C:\Database\lab4\SqlServerUDF\SqlServerUDF\bin\Debug\SqlServerUDF.dacpac
 C:\Database\lab4\SqlServerUDF\SqlServerUDF\bin\Debug\SqlServerUDF.dll
 C:\Database\lab4\SqlServerUDF\SqlServerUDF\bin\Debug\SqlServerUDF.pdb
-C:\Database\lab4\SqlServerUDF\SqlServerUDF\obj\Debug\SqlServerUDF.sqlprojAssemblyReference.cache
 C:\Database\lab4\SqlServerUDF\SqlServerUDF\obj\Debug\SqlServerUDF.dll
 C:\Database\lab4\SqlServerUDF\SqlServerUDF\obj\Debug\SqlServerUDF.pdb
 C:\Database\lab4\SqlServerUDF\SqlServerUDF\obj\Debug\Model.xml

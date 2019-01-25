@@ -20,7 +20,7 @@ EXTERNAL NAME
 SqlServerUDF.[Triggers].SqlTrigger1
 GO
 
-INSERT LinkerT(StationID, LineID, Vagons, Passengers) 
+INSERT LinkerT(StationID, LineID, Vagons, Passangers) 
 VALUES(1999,432,23445,2345)
 
 SELECT * 
